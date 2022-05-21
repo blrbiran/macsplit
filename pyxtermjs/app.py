@@ -122,11 +122,14 @@ def main():
         default="",
         help="arguments to pass to command (i.e. --cmd-args='arg1 arg2 --flag')",
     )
+    parser.add_argument("-d", "--device", default="/dev/tty.usbserial-0001", help="Uart tty device")
+    parser.add_argument("-b", "--baud", default="115200", help="Uart baudrate")
     args = parser.parse_args()
     if args.version:
         print(__version__)
         exit(0)
-    app.config["cmd"] = [args.command] + shlex.split(args.cmd_args)
+    # app.config["cmd"] = [args.command] + shlex.split(args.cmd_args)
+    app.config["cmd"] = ["python", "split.py", "--device", args.device, "--baud", args.baud]
     green = "\033[92m"
     end = "\033[0m"
     log_format = green + "pyxtermjs > " + end + "%(levelname)s (%(funcName)s:%(lineno)s) %(message)s"

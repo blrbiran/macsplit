@@ -24,3 +24,4 @@ python-socketio==5.4.0
     # via flask-socketio
 werkzeug==2.0.1
     # via flask
+pyserial==3.5
