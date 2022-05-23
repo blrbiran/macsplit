@@ -1,1 +1,2 @@
 flask-socketio==5.1.1
+pyserial==3.5

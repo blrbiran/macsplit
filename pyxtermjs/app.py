@@ -106,7 +106,7 @@ def main():
         ),
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    parser.add_argument("-p", "--port", default=5000, help="port to run server on")
+    parser.add_argument("-p", "--port", default=5005, help="port to run server on")
     parser.add_argument(
         "--host",
         default="127.0.0.1",
@@ -122,7 +122,7 @@ def main():
         default="",
         help="arguments to pass to command (i.e. --cmd-args='arg1 arg2 --flag')",
     )
-    parser.add_argument("-d", "--device", default="/dev/tty.usbserial-0001", help="Uart tty device")
+    parser.add_argument("-d", "--device", default="", help="Uart tty device")
     parser.add_argument("-b", "--baud", default="115200", help="Uart baudrate")
     args = parser.parse_args()
     if args.version:
