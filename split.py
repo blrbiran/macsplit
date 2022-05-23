@@ -89,7 +89,7 @@ class SerialSplit:
             self.logFds[channel] = open("./log/log." + str(channel.hex()) + ".log", "a")
         self.logFds[channel].write(content)
         self.logFds[channel].flush()
-        print(self.logFds)
+        # print(self.logFds)
 
     def postProcess(self, printChannel):
         for channel, content in self.channels.items():
@@ -132,12 +132,12 @@ class SerialSplit:
         else:
             print("Cannot open serial port")
 
-    def test_loopback(device):
+    def test_loopback(self):
         while True:
             in1 = input()
             print("$: " + in1)
 
-    def test_send(device):
+    def test_send(self):
         while True:
             print("$: test")
             time.sleep(1)

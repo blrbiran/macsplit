@@ -12,23 +12,18 @@ open http://localhost:5005
 
 ## API
 ```bash
-> split.py --help
-usage: pyxtermjs [-h] [-p PORT] [--host HOST] [--debug] [--version]
-                 [--command COMMAND] [--cmd-args CMD_ARGS]
+> ./split.py --help
+usage: split.py [-v] [-d DEVICE] [-b BAUD] [-h]
 
-A fully functional terminal in your browser.
-https://github.com/cs01/pyxterm.js
+A serial terminal in your browser.
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -p PORT, --port PORT  port to run server on (default: 5000)
-  --host HOST           host to run server on (use 0.0.0.0 to allow access
-                        from other hosts) (default: 127.0.0.1)
-  --debug               debug the server (default: False)
-  --version             print version and exit (default: False)
-  --command COMMAND     Command to run in the terminal (default: bash)
-  --cmd-args CMD_ARGS   arguments to pass to command (i.e. --cmd-args='arg1
-                        arg2 --flag') (default: )
+  -v, --version         Print version (default: False)
+  -d DEVICE, --device DEVICE
+                        Uart tty device (default: )
+  -b BAUD, --baud BAUD  Uart baudrate (default: 115200)
+  -h, --help            Print help (default: False)
+
 ```
 
 # Reference
